@@ -4,7 +4,9 @@ project(visualizer)
 set(CMAKE_AUTOMOC ON)
 cmake_policy(SET CMP0020 NEW)
 cmake_policy(SET CMP0043 NEW)
-cmake_policy(SET CMP0079 NEW)
+if (MSVC)
+    cmake_policy(SET CMP0079 NEW)
+endif (MSVC)
 
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
