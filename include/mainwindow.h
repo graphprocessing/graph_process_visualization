@@ -3,10 +3,6 @@
 #include <QMainWindow>
 #include <QPushButton>
 
-namespace Ui {
-class MainWindow;
-}
-
 class MainWindow : public QMainWindow {
 private:
     Q_OBJECT
@@ -18,7 +14,6 @@ private slots:
     void handleButton();
 
 private:
-    Ui::MainWindow *ui;
     QPushButton *button;
     int cnt = 0;
 };
