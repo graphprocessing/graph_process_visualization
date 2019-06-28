@@ -1,1 +1,1 @@
-# graph_process_visualization
+# A tool for visualizing graph processing
