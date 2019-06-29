@@ -4,6 +4,15 @@ matrix:
   include:
     - os: linux
       dist: xenial
+      name: Code style check
+      install:
+        - sudo apt-get install python-pip
+        - sudo pip install --upgrade pip
+        - sudo pip install setuptools cpplint
+      script:
+        - cpplint --recursive include src app
+    - os: linux
+      dist: xenial
       compiler: gcc
       addons:
         apt:
@@ -35,7 +44,6 @@ matrix:
         - cmake --build . -- -j
     - os: osx
       osx_image: xcode10.2
-      name: macOS-clang
       addons:
         homebrew:
           packages:

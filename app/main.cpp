@@ -1,5 +1,6 @@
-#include "mainwindow.h"
+// Copyright [year] <Copyright Owner>
 #include <QApplication>
+#include "./mainwindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);

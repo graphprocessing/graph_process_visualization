@@ -1,21 +1,22 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+// Copyright [year] <Copyright Owner>
+#ifndef INCLUDE_MAINWINDOW_H_
+#define INCLUDE_MAINWINDOW_H_
 #include <QMainWindow>
 #include <QPushButton>
 
 class MainWindow : public QMainWindow {
-private:
+ private:
     Q_OBJECT
-public:
+ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
+ private slots: // NOLINT
     void handleButton();
 
-private:
+ private:
     QPushButton *button;
     int cnt = 0;
 };
 
-#endif // MAINWINDOW_H
+#endif  // INCLUDE_MAINWINDOW_H_
