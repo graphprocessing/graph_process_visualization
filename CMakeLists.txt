@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.8)
-project(visualizer)
+project(graph_process_visualization)
 
 file(GLOB_RECURSE sources "src/*.cpp")
 file(GLOB_RECURSE headers "include/*.h")
@@ -14,8 +14,8 @@ endif()
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
 include("${PROJECT_SOURCE_DIR}/cmake/config.cmake")
-add_executable(visualizer app/main.cpp ${sources} ${headers})
+add_executable(${PROJECT_NAME} app/main.cpp ${sources} ${headers})
 
 include_directories(include)
 
-qt5_use_modules(visualizer Widgets)
+qt5_use_modules(${PROJECT_NAME} Widgets)
